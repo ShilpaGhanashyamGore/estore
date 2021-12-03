@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+            http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="Shilpa Gore" id="4">
+        <createTable tableName="short_description">
+            <column name="short_description_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" primaryKeyName="short_desc_id_pk" />
+            </column>
+            <column name="description" type="varchar(65)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="short-description-1" />
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
